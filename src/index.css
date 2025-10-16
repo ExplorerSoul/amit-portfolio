@@ -1,0 +1,91 @@
+:root {
+  /* Sets the default font stack for the application. */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Tells the browser that the site supports both light and dark color schemes. */
+  color-scheme: light dark;
+  /* Default text color (for dark mode). */
+  color: rgba(255, 255, 255, 0.87);
+  /* Default background color (for dark mode). */
+  background-color: #242424;
+
+  /* Disables font synthesis to use the actual font files for bold/italic. */
+  font-synthesis: none;
+  /* Optimizes text for readability. */
+  text-rendering: optimizeLegibility;
+  /* Enables smoother font rendering on different browsers. */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Basic styles for anchor (link) tags. */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit; /* Removes the default underline. */
+}
+a:hover {
+  color: #535bf2; /* Changes color on hover. */
+}
+
+/* Styles for the main body of the HTML document. */
+body {
+  margin: 0; /* Removes default browser margin. */
+  padding: 0; /* Ensures no unwanted padding. */
+  display: flex;
+  justify-content: center;   /* Centers horizontally */
+  align-items: center;       /* Centers vertically */
+  min-width: 320px;
+  min-height: 100vh; /* Ensures the body takes up the full height of the viewport. */
+  width: 100%;
+  box-sizing: border-box;    /* Makes padding part of total width/height */
+  overflow-x: hidden;        /* Prevents horizontal scrollbars on small screens */
+}
+
+/* Ensures consistent padding and spacing in child elements */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Styles for the main heading element. */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: 0.5em 0;
+}
+
+/* Styles for buttons. */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit; /* Uses the same font as the rest of the app. */
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* This media query applies different styles when the user's OS is set to light mode. */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

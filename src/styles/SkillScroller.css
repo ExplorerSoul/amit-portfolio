@@ -1,0 +1,66 @@
+@keyframes scroll-ltr {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-rtl {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.scroller {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%);
+}
+
+.scroller-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 40s;
+}
+
+.scroller:hover .scroller-inner {
+    animation-play-state: paused;
+}
+
+.scroller-inner-ltr {
+    animation-name: scroll-ltr;
+}
+
+.scroller-inner-rtl {
+    animation-name: scroll-rtl;
+}
+
+.skill-item {
+    flex-shrink: 0;
+    margin: 0 1rem; /* [&_li]:mx-4 */
+}
+
+.skill-bubble {
+    background-color: #fff;
+    color: #1F2937; /* text-gray-800 */
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px; /* rounded-full */
+    font-weight: 500;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+    white-space: nowrap;
+}
+
+.dark .skill-bubble {
+    background-color: #1F2937; /* dark:bg-gray-800 */
+    color: #E5E7EB; /* dark:text-gray-200 */
+}

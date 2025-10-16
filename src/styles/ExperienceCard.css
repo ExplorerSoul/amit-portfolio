@@ -1,0 +1,74 @@
+.experience-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    border-left: 4px solid #4285F4; /* border-l-4 border-google-blue */
+    transition: box-shadow 0.3s;
+}
+
+.dark .experience-card {
+    background-color: #1F2937; /* dark:bg-gray-800 */
+}
+
+.experience-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-xl */
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-title {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700;
+    color: #111827; /* text-gray-900 */
+    text-align: left;
+}
+
+.dark .card-title {
+    color: #fff;
+}
+
+.card-company {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600;
+    text-align: left;
+    /* The color is dynamic, so it will be handled with an inline style */
+}
+
+.card-duration {
+    background-color: #F3F4F6; /* bg-gray-100 */
+    color: #4B5563; /* text-gray-600 */
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px; /* rounded-full */
+}
+
+.dark .card-duration {
+    background-color: #374151; /* dark:bg-gray-700 */
+    color: #D1D5DB; /* dark:text-gray-300 */
+}
+
+.card-description-list {
+    margin-top: 1rem;
+    padding-left: 1.25rem; /* Add padding for bullet points */
+    list-style-type: disc;
+    list-style-position: outside; /* Changed from inside to outside */
+    color: #4B5563; /* text-gray-600 */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* space-y-2 */
+}
+
+.dark .card-description-list {
+    color: #9CA3AF; /* dark:text-gray-400 */
+}
+
+.card-description-list li {
+    text-align: left;
+    padding-left: 0.25rem; /* Small padding for better spacing */
+}

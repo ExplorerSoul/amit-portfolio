@@ -1,0 +1,195 @@
+.hero-section {
+    background-color: #ffffff;
+}
+.dark .hero-section {
+    background-color: #1F2937; /* dark:bg-gray-800 */
+}
+.hero-container {
+    max-width: 80rem; /* max-w-7xl */
+    margin: 0 auto;
+    padding: 6rem 1rem; /* py-24 */
+}
+@media (min-width: 768px) { /* md:py-32 */
+    .hero-container {
+        padding: 8rem 1.5rem; 
+    }
+}
+@media (min-width: 1024px) {
+    .hero-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+@media (min-width: 768px) { /* md:grid-cols-2 */
+    .hero-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.hero-text {
+    text-align: center;
+}
+@media (min-width: 768px) { /* md:text-left */
+    .hero-text {
+        text-align: left;
+    }
+}
+.hero-intro {
+    color: #4285F4; /* text-google-blue */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero-name {
+    margin-top: 0.5rem;
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 800;
+    color: #111827; /* text-gray-900 */
+    letter-spacing: -0.025em; /* tracking-tight */
+}
+.dark .hero-name {
+    color: #ffffff;
+}
+@media (min-width: 768px) { /* md:text-6xl */
+    .hero-name {
+        font-size: 3.75rem;
+    }
+}
+
+.hero-title {
+    margin-top: 1rem;
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600;
+    color: #4B5563; /* text-gray-600 */
+}
+.dark .hero-title {
+    color: #D1D5DB; /* dark:text-gray-300 */
+}
+@media (min-width: 768px) { /* md:text-3xl */
+    .hero-title {
+        font-size: 1.875rem;
+    }
+}
+
+.hero-summary {
+    margin-top: 1.5rem;
+    max-width: 36rem; /* max-w-xl */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.125rem; /* text-lg */
+    color: #6B7280; /* text-gray-500 */
+}
+.dark .hero-summary {
+    color: #9CA3AF; /* dark:text-gray-400 */
+}
+@media (min-width: 768px) { /* md:mx-0 */
+    .hero-summary {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+@media (min-width: 768px) { /* md:justify-start */
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 0.375rem;
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600;
+    transform: scale(1);
+    transition: all 0.3s;
+}
+
+.hero-button:hover {
+    transform: scale(1.05);
+}
+
+.hero-button-primary {
+    background-color: #4285F4; /* bg-google-blue */
+    color: white;
+}
+.hero-button-primary:hover {
+    background-color: rgba(66, 133, 244, 0.9);
+}
+
+.hero-button-secondary {
+    background-color: #E5E7EB; /* bg-gray-200 */
+    color: #1F2937; /* text-gray-800 */
+}
+.dark .hero-button-secondary {
+    background-color: #374151; /* dark:bg-gray-700 */
+    color: #E5E7EB; /* dark:text-gray-200 */
+}
+.hero-button-secondary:hover {
+    background-color: #D1D5DB; /* hover:bg-gray-300 */
+}
+.dark .hero-button-secondary:hover {
+    background-color: #4B5563; /* dark:hover:bg-gray-600 */
+}
+
+.hero-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 20rem; /* w-80 */
+    height: 20rem; /* h-80 */
+}
+@media (min-width: 1024px) { /* lg:w-96 lg:h-96 */
+    .hero-image-wrapper {
+        width: 24rem;
+        height: 24rem;
+    }
+}
+.hero-image-bg1 {
+    position: absolute;
+    inset: 0;
+    background-color: #34A853; /* bg-google-green */
+    border-radius: 9999px;
+    opacity: 0.2;
+    transform: rotate(45deg);
+}
+
+.hero-image-bg2 {
+    position: absolute;
+    inset: 1rem;
+    background-color: #FBBC05; /* bg-google-yellow */
+    border-radius: 9999px;
+    opacity: 0.2;
+    transform: rotate(-45deg);
+}
+
+.hero-image {
+    position: relative;
+    border-radius: 9999px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 4px solid white;
+}
+.dark .hero-image {
+    border-color: #1F2937; /* dark:border-gray-800 */
+}

@@ -1,0 +1,62 @@
+/* Using the same section styles from Projects.css for consistency */
+.experience-section {
+    background-color: #F9FAFB; /* bg-gray-50 */
+    padding: 5rem 0;
+}
+.dark .experience-section {
+    background-color: #111827; /* dark:bg-gray-900 */
+}
+@media (min-width: 640px) {
+    .experience-section {
+        padding: 6rem 0;
+    }
+}
+.experience-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+@media (min-width: 640px) {
+    .experience-container {
+        padding: 0 1.5rem;
+    }
+}
+@media (min-width: 1024px) {
+    .experience-container {
+        padding: 0 2rem;
+    }
+}
+.experience-header {
+    text-align: center;
+}
+.experience-title {
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #111827;
+    letter-spacing: -0.025em;
+}
+.dark .experience-title {
+    color: #fff;
+}
+@media (min-width: 640px) {
+    .experience-title {
+        font-size: 2.25rem;
+    }
+}
+.experience-subtitle {
+    margin-top: 1rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.125rem;
+    color: #6B7280;
+}
+.dark .experience-subtitle {
+    color: #9CA3AF;
+}
+.experience-grid {
+    margin-top: 4rem; /* mt-16 */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem; /* gap-12 */
+}

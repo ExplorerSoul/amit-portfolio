@@ -1,0 +1,55 @@
+#root {
+  width: 100%;              /* Take full available width */
+  max-width: 100vw;         /* Ensure it never exceeds the viewport width */
+  min-height: 100vh;   /* Sets a maximum width for your app content. */
+  margin: 0 auto;     /* Centers the app horizontally. */
+  padding: 0rem;      /* Adds space around the content. */
+  text-align: center; /* Centers the text inside. */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Styles for the logo images. */
+.logo {
+  height: 6em;           /* Sets the height of the logos. */
+  padding: 1.5em;        /* Adds space around the logos. */
+  will-change: filter;   /* Optimizes the filter animation for performance. */
+  transition: filter 300ms; /* Creates a smooth transition for the filter effect. */
+}
+
+/* Adds a glow effect when you hover over the first (Vite) logo. */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+/* Adds a different colored glow when you hover over the logo with the 'react' class. */
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Defines the spinning animation keyframes. */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Applies the spinning animation to the React logo. */
+/* This only runs if the user has NOT requested reduced motion in their OS settings for accessibility. */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Styles for the main card/button container. */
+.card {
+  padding: 2em;
+}
+
+/* Styles for the "Click on the Vite and React logos..." text. */
+.read-the-docs {
+  color: #888;
+}
