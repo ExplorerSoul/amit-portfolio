@@ -1,73 +1,129 @@
-# React + TypeScript + Vite
+# Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, modern, and responsive personal portfolio website built with React, TypeScript, and Tailwind CSS. Designed to showcase projects, experience, and skills with a Google-inspired aesthetic.
 
-Currently, two official plugins are available:
+![Portfolio Screenshot](https://picsum.photos/seed/portfolio-screenshot/1200/600)
+*(Note: Replace this with a screenshot of your actual portfolio)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## React Compiler
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Development Server](#running-the-development-server)
+  - [Building for Production](#building-for-production)
+- [Project Structure](#project-structure)
+- [Customization](#customization)
+- [License](#license)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- **Modern & Responsive Design**: Looks great on all devices, from mobile phones to desktops.
+- **Dark/Light Mode**: User-selectable theme that persists in local storage.
+- **Smooth Scrolling**: Seamless navigation between sections.
+- **Interactive UI**: Engaging elements like project tag filtering and an infinite skill scroller.
+- **Component-Based Architecture**: Built with reusable React components for easy maintenance.
+- **Key Sections**:
+  - **Hero**: A compelling introduction with a call-to-action.
+  - **Experience**: A timeline of your professional journey.
+  - **Projects**: A filterable gallery of your work with links to live demos and source code.
+  - **Skills**: An animated scroller showcasing your technical skills.
+- **SEO Friendly**: Semantic HTML and clear structure.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Framework**: [React](https://reactjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **State Management**: React Hooks (`useState`, `useEffect`)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Follow these instructions to get a local copy up and running.
+
+### Prerequisites
+
+Make sure you have Node.js and npm (or yarn/pnpm) installed on your machine.
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [npm](https://www.npmjs.com/get-npm)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-portfolio-repo.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd your-portfolio-repo
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Development Server
+
+To start the local development server, run:
+```bash
+npm run dev
+```
+Open [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal) to view the application in your browser. The page will auto-reload when you make changes.
+
+### Building for Production
+
+To create a production-ready build of the application, run:
+```bash
+npm run build
+```
+This command will generate a `dist` folder with optimized static assets that you can deploy to any web hosting service.
+
+## Project Structure
+
+The codebase is organized to be modular and easy to navigate.
+
+```
+/
+├── public/              # Static assets
+├── src/
+│   ├── components/      # Reusable React components (Header, Footer, etc.)
+│   ├── constants.ts     # Centralized site data (profile, projects, experience)
+│   ├── types.ts         # TypeScript type definitions
+│   ├── App.tsx          # Main application component layout
+│   ├── index.css        # Global styles entry point
+│   ├── index.tsx        # React application entry point
+│   └── ...
+├── .gitignore
+├── index.html           # Main HTML template
+├── package.json
+├── README.md            # This file
+├── tailwind.config.js   # Tailwind CSS configuration
+└── tsconfig.json        # TypeScript configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Customization
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This portfolio is designed to be easily customized with your own information.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  **Update Personal Information**:
+    Open `src/constants.ts` and modify the `PROFILE_DATA` object with your name, title, summary, email, and social media links.
+
+2.  **Add Your Projects**:
+    In the same `src/constants.ts` file, update the `PROJECTS` array. Each project is an object with a title, description, image URL, tags, and optional links for a live demo and source code.
+
+3.  **Update Your Experience**:
+    Modify the `EXPERIENCES` array in `src/constants.ts`. Each experience object contains details about your role, company, duration, and key responsibilities.
+
+4.  **List Your Skills**:
+    Update the `SKILL_CATEGORIES` array to reflect your technical skills. The skills are automatically populated into the animated scroller.
+
+5.  **Change Images**:
+    - **Profile Picture**: Replace the URL in the `Hero.tsx` component with a link to your own photo.
+    - **Project Images**: Update the `imageUrl` property for each project in the `PROJECTS` array. You can use a service like [Picsum Photos](https://picsum.photos/) for placeholders or upload your own images.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
