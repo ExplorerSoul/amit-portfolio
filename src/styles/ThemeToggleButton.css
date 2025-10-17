@@ -1,5 +1,7 @@
 .theme-toggle-button {
-    border: none;
+    padding: 0.4rem 0.4rem 0.2rem 0.4rem;
+    border: 1px solid; /* border-gray-300 */
+    border-radius: 50%; /* rounded-md */
     color: #4B5563;
     background-color: transparent;
     cursor: pointer;
